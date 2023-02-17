@@ -1,0 +1,43 @@
+[
+  {
+    "id": "1111",
+    "img": "https://c7.alamy.com/comp/D2X5YG/can-of-coca-cola-D2X5YG.jpg",
+    "name": "Coke",
+    "price": 1.5,
+    "stock": 5
+  },
+  {
+    "id": "2222",
+    "img": "https://c7.alamy.com/comp/D8TRRP/a-can-of-pepsi-cola-on-a-white-background-D8TRRP.jpg",
+    "name": "Pepsi",
+    "price": 1.3,
+    "stock": 2
+  },
+  {
+    "id": "3333",
+    "img": "https://c7.alamy.com/comp/J26M3H/kitkat-cut-out-or-isolated-against-a-white-background-J26M3H.jpg",
+    "name": "KitKat",
+    "price": 2,
+    "stock": 14
+  },
+  {
+    "id": "4444",
+    "img": "https://c7.alamy.com/comp/D2X675/bar-of-snickers-chocolate-D2X675.jpg",
+    "name": "Snickers",
+    "price": 2.3,
+    "stock": 6
+  },
+  {
+    "id": "5555",
+    "img": "https://c7.alamy.com/comp/D2X639/mars-bar-chocolate-bar-D2X639.jpg",
+    "name": "Mars",
+    "price": 2.3,
+    "stock": 5
+  },  {
+    "id": "6666",
+    "img": "https://c7.alamy.com/comp/DT0PPH/bag-of-haribo-goldbears-sweets-DT0PPH.jpg",
+    "name": "Haribo",
+    "price": 2.1,
+    "stock": 1
+  }
+]

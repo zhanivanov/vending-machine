@@ -1,0 +1,13 @@
+<div class="card">
+  <h3 class="card-header">{{product?.name}}</h3>
+  <div class="card-block">
+    <div class="card-media-block">
+      <img [src]="product?.img" class="card-media-image" />
+      <div class="card-media-description">
+        <span class="card-media-text">Code: <strong>{{product?.id}}</strong></span>
+        <span class="card-media-text">Price: <strong>{{product?.price | currency}}</strong></span>
+        <span class="card-media-text">Stock: <strong>{{product?.stock}}</strong></span>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,24 @@
+<div class="vending-wrapper clr-row">
+  <div class="vending-products clr-col-lg-8 clr-col-12">
+    <div class="clr-row">
+      <ng-container *ngFor="let product of products">
+        <div class="clr-col-xl-4 clr-col-6" *ngIf="product.stock > 0">
+          <app-product-card [product]="product"></app-product-card>
+        </div>
+      </ng-container>
+    </div>
+  </div>
+  <div class="vending-settings clr-col-lg-4 clr-col-12">
+    <app-vending-coins [insertedAmount]="amount" (insertedAmountChange)="onAmountChange($event)"></app-vending-coins>
+    <app-vending-code [disabled]="!amount" [code]="code" (codeChange)="onCodeChange($event)"></app-vending-code>
+    <div class="btn-group btn-primary">
+      <button class="btn btn-success" [disabled]="!amount || !code" (click)="buy()">Buy</button>
+      <button class="btn btn-danger" [disabled]="!amount && !code" (click)="cancel()">Cancel</button>
+    </div>
+    <div class="vending-log">
+      <p *ngFor="let msg of messages" [ngClass]="msg.type">
+        [{{msg.type | uppercase}}] {{msg.message}}
+      </p>
+    </div>
+  </div>
+</div>

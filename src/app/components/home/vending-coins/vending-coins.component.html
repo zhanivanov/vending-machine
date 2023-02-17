@@ -1,0 +1,9 @@
+<h1>Insert Coins</h1>
+
+<div class="coins">
+  <div class="coin" *ngFor="let coin of coins" [class.gold]="coin >= 1" (click)="insertCoin(coin)">{{coin | currency}}</div>
+</div>
+
+<div class="coins-display">
+  {{insertedAmount | currency}}
+</div>

@@ -1,0 +1,7 @@
+.products-wrapper {
+  display: flex;
+  flex-direction: column;
+  clr-button-group {
+    align-self: flex-end;
+  }
+}

@@ -1,0 +1,26 @@
+.vending-settings {
+  .btn-group {
+    margin-top: 1rem;
+  }
+
+  .vending-log {
+    margin-top: 1rem;
+    max-height: 300px;
+    overflow: auto;
+
+    p {
+      margin: 0;
+      &.error {
+        color: #ff7f87;
+      }
+  
+      &.info {
+        color: #1ca8ff;
+      }
+  
+      &.success {
+        color: #3c8500;
+      }
+    }
+  }
+}

@@ -1,0 +1,12 @@
+:host {
+  &::ng-deep {
+    .clr-control-container {
+      padding-right: 2rem;
+    }
+  }
+  .modal-body {
+    input {
+      width: 100%;
+    }
+  }
+}

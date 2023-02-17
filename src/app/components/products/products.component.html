@@ -1,0 +1,24 @@
+<div class="products-wrapper">
+  <clr-button-group>
+    <clr-button class="btn" (click)="isEditProductDialogOpen = true">+ Add</clr-button>
+    <clr-button [disabled]="!selectedProducts.length || selectedProducts.length > 1" class="btn" (click)="isEditProductDialogOpen = true">Edit</clr-button>
+    <clr-button [disabled]="!selectedProducts.length" class="btn" (click)="delete(selectedProducts)">Delete</clr-button>
+  </clr-button-group>
+  <clr-datagrid [(clrDgSelected)]="selectedProducts">
+    <clr-dg-column [clrDgField]="'name'">Name</clr-dg-column>
+    <clr-dg-column [clrDgField]="'price'">Price</clr-dg-column>
+    <clr-dg-column [clrDgField]="'stock'">Stock</clr-dg-column>
+    <!-- <clr-dg-column [clrDgField]="'color'">Favorite color</clr-dg-column>
+  <clr-dg-column [clrDgField]="'wins'" [clrDgColType]="'number'">Wins</clr-dg-column> -->
+
+    <clr-dg-row *clrDgItems="let product of products" [clrDgItem]="product">
+      <clr-dg-cell>{{product.name}}</clr-dg-cell>
+      <clr-dg-cell>{{product.price | currency}}</clr-dg-cell>
+      <clr-dg-cell>{{product.stock}}</clr-dg-cell>
+    </clr-dg-row>
+
+    <clr-dg-footer>{{products.length}} products</clr-dg-footer>
+  </clr-datagrid>
+</div>
+
+<app-edit-product-modal *ngIf="isEditProductDialogOpen" [(isOpen)]="isEditProductDialogOpen" [product]="selectedProducts[0]" (onSave)="onSave($event)"></app-edit-product-modal>

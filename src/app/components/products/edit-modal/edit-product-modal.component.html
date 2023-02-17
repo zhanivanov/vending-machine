@@ -1,0 +1,33 @@
+<clr-modal [clrModalOpen]="isOpen" (clrModalOpenChange)="isOpenChange.emit(false)">
+  <h3 class="modal-title">{{product ? "Edit" : "Add"}} product</h3>
+  <div class="modal-body">
+    <form clrForm [formGroup]="productForm">
+      <clr-input-container>
+        <label>Name</label>
+        <input clrInput type="text" formControlName="name" name="name" required />
+        <clr-control-error>Product name is required.</clr-control-error>
+      </clr-input-container>
+      <clr-input-container>
+        <label>Image Src</label>
+        <input clrInput type="text" formControlName="img" name="img" required />
+      </clr-input-container>
+      <clr-input-container>
+        <label>Price</label>
+        <input clrInput type="number" formControlName="price" name="price" />
+      </clr-input-container>
+      <clr-input-container>
+        <label>Stock</label>
+        <input clrInput type="number" formControlName="stock" name="stock" />
+        <clr-control-error>Cannot stock more than 15 items.</clr-control-error>
+      </clr-input-container>
+    </form>
+  </div>
+  <div class="modal-footer">
+    <button type="button" class="btn" (click)="isOpenChange.emit(false)">
+      Cancel
+    </button>
+    <button type="button" class="btn btn-primary" [disabled]="!productForm.valid" (click)="save()">
+      {{product ? "Save" : "Add"}}
+    </button>
+  </div>
+</clr-modal>

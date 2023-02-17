@@ -1,0 +1,12 @@
+<h1>Select Product</h1>
+
+<div class="code-input">
+
+</div>
+<div class="code-wrapper">
+  <button class="btn" *ngFor="let num of nums" [disabled]="disabled" (click)="enterCode(num)">{{num}}</button>
+</div>
+
+<div class="code-display">
+  {{code}}
+</div>
